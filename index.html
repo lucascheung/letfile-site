@@ -35,6 +35,7 @@
     --sage:#E1E9DA;
     --sage-line:#C9D6C2;
     --ochre:#B97A28;
+    --ochre-ink:#8A5A12;
     --ochre-soft:#F1E2C4;
     --terra:#A8472A;
     --line:rgba(23,35,28,0.14);
@@ -68,6 +69,14 @@
     mix-blend-mode:multiply;
   }
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;position:relative;z-index:1;}
+
+  /* skip link */
+  .skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--green);color:#F6F2E9;padding:.6em 1em;font-weight:600;border-radius:0 0 var(--r-sm) 0}
+  .skip:focus{left:0}
+
+  /* visible focus */
+  a:focus-visible,.btn:focus-visible,summary:focus-visible{outline:3px solid var(--green);outline-offset:2px;border-radius:var(--r-sm)}
+  .band.green a:focus-visible,.band.green .btn:focus-visible,form.cap input:focus-visible,form.cap .btn-primary:focus-visible{outline:3px solid #E6B566;outline-offset:2px}
 
   a{color:inherit;text-decoration:none;}
   h1,h2,h3{font-family:var(--font-display);font-weight:500;line-height:1.08;letter-spacing:-.01em;margin:0;}
@@ -170,7 +179,7 @@
   .band.alt{background:var(--paper-2);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);}
   .band.green{background:var(--green-deep);color:#EAF0E6;}
   .band.green h2,.band.green h3{color:#fff;}
-  .kicker{font-size:.82rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ochre);margin-bottom:14px;}
+  .kicker{font-size:.82rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ochre-ink);margin-bottom:14px;}
   .band.green .kicker{color:#E6B566;}
   h2.sec{font-size:clamp(1.9rem,3.6vw,2.7rem);max-width:18ch;}
   .sec-lead{font-size:1.12rem;color:var(--muted);max-width:52ch;margin-top:16px;}
@@ -202,7 +211,7 @@
   .owner .who{display:flex;align-items:center;gap:.5em;font-weight:600;margin-bottom:12px;}
   .owner .pin{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:.72rem;font-weight:700;}
   .owner.a .pin{background:var(--green);}
-  .owner.b .pin{background:var(--ochre);}
+  .owner.b .pin{background:#8A5A12;}
   .ln{display:flex;justify-content:space-between;font-size:.9rem;padding:5px 0;color:var(--muted);font-variant-numeric:tabular-nums;}
   .ln b{color:var(--ink);font-weight:600;}
   .owner .tag{margin-top:12px;font-size:.78rem;font-weight:600;color:var(--green);}
@@ -286,7 +295,7 @@
   @media(max-width:520px){form.cap{flex-direction:column;}}
   form.cap input[type=email]{
     flex:1;font-family:var(--font-body);font-size:1.02rem;
-    padding:.95em 1.1em;border-radius:var(--r-sm);border:1.5px solid rgba(255,255,255,.2);
+    padding:.95em 1.1em;border-radius:var(--r-sm);border:1.5px solid rgba(255,255,255,.55);
     background:rgba(255,255,255,.07);color:#fff;
   }
   form.cap input[type=email]::placeholder{color:#9DB3A2;}
@@ -303,7 +312,7 @@
   details.q{border-bottom:1px solid var(--line);padding:6px 0;}
   details.q summary{cursor:pointer;list-style:none;padding:18px 36px 18px 4px;font-family:var(--font-display);font-size:1.18rem;font-weight:500;position:relative;}
   details.q summary::-webkit-details-marker{display:none;}
-  details.q summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);font-size:1.5rem;color:var(--ochre);transition:transform .2s;font-family:var(--font-body);}
+  details.q summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);font-size:1.5rem;color:var(--ochre-ink);transition:transform .2s;font-family:var(--font-body);}
   details.q[open] summary::after{transform:translateY(-50%) rotate(45deg);}
   details.q .a{padding:0 36px 20px 4px;color:var(--muted);}
   details.q .a a{color:var(--green);text-decoration:underline;text-underline-offset:2px;}
@@ -320,10 +329,11 @@
   .reveal{opacity:0;transform:translateY(16px);animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards;}
   @keyframes rise{to{opacity:1;transform:none;}}
   .d1{animation-delay:.05s}.d2{animation-delay:.15s}.d3{animation-delay:.25s}.d4{animation-delay:.35s}.d5{animation-delay:.45s}
-  @media(prefers-reduced-motion:reduce){.reveal{animation:none;opacity:1;transform:none;}}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}.reveal{animation:none;opacity:1;transform:none;}}
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
 <!-- ============ TOP BAR ============ -->
 <header class="bar">
@@ -339,6 +349,7 @@
   </div>
 </header>
 
+<main id="main">
 <!-- ============ HERO ============ -->
 <a id="top"></a>
 <section class="hero">
@@ -352,27 +363,27 @@
         <a href="#signup" class="btn btn-ghost btn-lg">Notify me at launch</a>
       </div>
       <div class="fearchips reveal d5">
-        <span class="chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#A8472A" stroke-width="2.2"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>£200 penalty when you slip</span>
-        <span class="chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#B97A28" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>5 deadlines a year</span>
-        <span class="chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1F4D3A" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>HMRC won't give you the software</span>
+        <span class="chip"><svg aria-hidden="true" focusable="false" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#A8472A" stroke-width="2.2"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>£200 penalty when you slip</span>
+        <span class="chip"><svg aria-hidden="true" focusable="false" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#B97A28" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>5 deadlines a year</span>
+        <span class="chip"><svg aria-hidden="true" focusable="false" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1F4D3A" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>HMRC won't give you the software</span>
       </div>
     </div>
 
     <!-- filings panel -->
-    <div class="filings reveal d4" aria-hidden="true">
+    <div class="filings reveal d4">
       <div class="ph">
         <b>Your 2026/27 filings</b>
         <span class="x2">× 2 owners</span>
       </div>
       <div class="stamp-row">
-        <div class="stamp"><span class="n">Q1</span><span class="lab">Quarterly update</span><span class="due">7 Aug 2026</span></div>
-        <div class="stamp"><span class="n">Q2</span><span class="lab">Quarterly update</span><span class="due">7 Nov 2026</span></div>
-        <div class="stamp"><span class="n">Q3</span><span class="lab">Quarterly update</span><span class="due">7 Feb 2027</span></div>
-        <div class="stamp"><span class="n">Q4</span><span class="lab">Quarterly update</span><span class="due">7 May 2027</span></div>
-        <div class="stamp final"><span class="n">✓</span><span class="lab">Final declaration</span><span class="due">31 Jan 2028</span></div>
+        <div class="stamp"><span class="n" aria-hidden="true">Q1</span><span class="lab">Quarterly update</span><span class="due">7 Aug 2026</span></div>
+        <div class="stamp"><span class="n" aria-hidden="true">Q2</span><span class="lab">Quarterly update</span><span class="due">7 Nov 2026</span></div>
+        <div class="stamp"><span class="n" aria-hidden="true">Q3</span><span class="lab">Quarterly update</span><span class="due">7 Feb 2027</span></div>
+        <div class="stamp"><span class="n" aria-hidden="true">Q4</span><span class="lab">Quarterly update</span><span class="due">7 May 2027</span></div>
+        <div class="stamp final"><span class="n" aria-hidden="true">✓</span><span class="lab">Final declaration</span><span class="due">31 Jan 2028</span></div>
       </div>
       <div class="foot">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4C5A50" stroke-width="2" style="flex:none;margin-top:2px"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+        <svg aria-hidden="true" focusable="false" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4C5A50" stroke-width="2" style="flex:none;margin-top:2px"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
         <span>Own jointly? Each of those happens twice: ten filings across the household. We handle the split.</span>
       </div>
     </div>
@@ -387,17 +398,17 @@
     <p class="sec-lead">From 6 April 2026, HMRC requires digital records and quarterly reporting. It is not optional, HMRC does not provide the software, and the threshold keeps falling, so more landlords are pulled in every year.</p>
     <div class="prob-grid">
       <div class="pcard">
-        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></div>
+        <div class="ic"><svg aria-hidden="true" focusable="false" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></div>
         <h3>Five filings, not one</h3>
         <p>Four quarterly updates plus a year-end final declaration, every tax year, for every person with qualifying income over the threshold.</p>
       </div>
       <div class="pcard">
-        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <div class="ic"><svg aria-hidden="true" focusable="false" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
         <h3>£200 when you slip</h3>
         <p>Late submissions earn penalty points. Hit four points and it's a £200 charge, then more. Five deadlines a year is five chances to forget.</p>
       </div>
       <div class="pcard">
-        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div class="ic"><svg aria-hidden="true" focusable="false" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
         <h3>Twice the work, if you own together</h3>
         <p>Jointly-owned property means two separate taxpayers, two sets of obligations, two final declarations. Most software pretends couples don't exist.</p>
       </div>
@@ -413,15 +424,15 @@
     <div class="wedge">
       <div>
         <ul class="check-list">
-          <li><span class="tick"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>Automatic ownership splits.</b> Set 50/50, or any share, and every figure is apportioned correctly to each owner.</span></li>
-          <li><span class="tick"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>Two correct submissions, one dataset.</b> No double entry, no spreadsheet gymnastics, no wondering whose half is whose.</span></li>
-          <li><span class="tick"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>Mortgage interest handled properly.</b> The Section 24 finance-cost restriction is applied the way HMRC expects, not bolted on as an afterthought.</span></li>
-          <li><span class="tick"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>Keep your spreadsheet if you like it.</b> Import what you already track. We don't make you learn accounting software.</span></li>
+          <li><span class="tick" aria-hidden="true"><svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>Automatic ownership splits.</b> Set 50/50, or any share, and every figure is apportioned correctly to each owner.</span></li>
+          <li><span class="tick" aria-hidden="true"><svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>Two correct submissions, one dataset.</b> No double entry, no spreadsheet gymnastics, no wondering whose half is whose.</span></li>
+          <li><span class="tick" aria-hidden="true"><svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>Mortgage interest handled properly.</b> The Section 24 finance-cost restriction is applied the way HMRC expects, not bolted on as an afterthought.</span></li>
+          <li><span class="tick" aria-hidden="true"><svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>Keep your spreadsheet if you like it.</b> Import what you already track. We don't make you learn accounting software.</span></li>
         </ul>
       </div>
       <div class="split-card">
         <div class="house">
-          <span class="emoji">🏡</span>
+          <span class="emoji" aria-hidden="true">🏡</span>
           <b>14 Maple Road<span>£14,400 rent · £3,200 costs this quarter</span></b>
         </div>
         <div class="owners">
@@ -488,11 +499,11 @@
         </div>
         <div class="combined">
           <span>Your qualifying income</span>
-          <b id="combined">£0</b>
+          <b id="combined" aria-live="polite">£0</b>
         </div>
       </div>
 
-      <div class="verdict empty" id="verdict">
+      <div class="verdict empty" id="verdict" role="status" aria-live="polite" aria-atomic="true">
         <div>
           <div class="big">Enter your figures</div>
           <p style="margin:0">We'll tell you whether, and exactly when, Making Tax Digital applies to you, with your deadlines.</p>
@@ -515,10 +526,10 @@
         <div class="amt">£5<small> /year</small></div>
         <div class="per">All 5 submissions included</div>
         <ul>
-          <li><span class="tick">✓</span> 4 quarterly updates + final declaration</li>
-          <li><span class="tick">✓</span> Up to 3 properties</li>
-          <li><span class="tick">✓</span> Spreadsheet import</li>
-          <li><span class="tick">✓</span> Deadline reminders</li>
+          <li><span class="tick" aria-hidden="true">✓</span> 4 quarterly updates + final declaration</li>
+          <li><span class="tick" aria-hidden="true">✓</span> Up to 3 properties</li>
+          <li><span class="tick" aria-hidden="true">✓</span> Spreadsheet import</li>
+          <li><span class="tick" aria-hidden="true">✓</span> Deadline reminders</li>
         </ul>
         <a href="#signup" class="btn btn-ghost">Notify me</a>
       </div>
@@ -528,11 +539,11 @@
         <div class="amt">£8<small> /year</small></div>
         <div class="per">For both of you, not each</div>
         <ul>
-          <li><span class="tick">✓</span> <b>Both owners' filings</b>, all 10 submissions</li>
-          <li><span class="tick">✓</span> Automatic ownership splitting</li>
-          <li><span class="tick">✓</span> Up to 5 properties</li>
-          <li><span class="tick">✓</span> Section 24 handled correctly</li>
-          <li><span class="tick">✓</span> Spreadsheet import + reminders</li>
+          <li><span class="tick" aria-hidden="true">✓</span> <b>Both owners' filings</b>, all 10 submissions</li>
+          <li><span class="tick" aria-hidden="true">✓</span> Automatic ownership splitting</li>
+          <li><span class="tick" aria-hidden="true">✓</span> Up to 5 properties</li>
+          <li><span class="tick" aria-hidden="true">✓</span> Section 24 handled correctly</li>
+          <li><span class="tick" aria-hidden="true">✓</span> Spreadsheet import + reminders</li>
         </ul>
         <a href="#signup" class="btn btn-primary">Notify me</a>
       </div>
@@ -542,10 +553,10 @@
         <div class="amt">£15<small> /year</small></div>
         <div class="per">For larger holdings</div>
         <ul>
-          <li><span class="tick">✓</span> Everything in Couple</li>
-          <li><span class="tick">✓</span> Unlimited properties</li>
-          <li><span class="tick">✓</span> Joint &amp; multi-owner splits</li>
-          <li><span class="tick">✓</span> Priority support</li>
+          <li><span class="tick" aria-hidden="true">✓</span> Everything in Couple</li>
+          <li><span class="tick" aria-hidden="true">✓</span> Unlimited properties</li>
+          <li><span class="tick" aria-hidden="true">✓</span> Joint &amp; multi-owner splits</li>
+          <li><span class="tick" aria-hidden="true">✓</span> Priority support</li>
         </ul>
         <a href="#signup" class="btn btn-ghost">Notify me</a>
       </div>
@@ -561,10 +572,10 @@
     <p class="lead">Leave your email and we'll tell you the moment LetFile opens, and lock in your launch price. No spam, just one message when it's ready.</p>
 
     <form class="cap" id="capForm" novalidate>
-      <input type="email" id="email" placeholder="you@example.com" aria-label="Email address" required>
+      <input type="email" id="email" placeholder="you@example.com" aria-label="Email address" aria-describedby="capNote" required>
       <button type="submit" class="btn btn-primary btn-lg">Notify me →</button>
     </form>
-    <p class="cap-note" id="capNote">Join early landlords already on the list. We'll only email about LetFile.</p>
+    <p class="cap-note" id="capNote" role="status" aria-live="polite">Join early landlords already on the list. We'll only email about LetFile.</p>
 
     <div class="cap-success" id="capSuccess">
       <strong style="font-family:var(--font-display);font-size:1.2rem;">You're on the list ✓</strong>
@@ -606,6 +617,7 @@
     </div>
   </div>
 </section>
+</main>
 
 <!-- ============ FOOTER ============ -->
 <footer class="foot">
@@ -621,7 +633,7 @@
     </div>
     <div class="foot-legal">
       <span>© 2026 LetFile (working name). All rights reserved.</span>
-      <span>hello@letfile.example · Privacy · Terms</span>
+      <span><a href="mailto:security@letfile.co.uk">security@letfile.co.uk</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="/.well-known/security.txt">Security</a></span>
     </div>
   </div>
 </footer>
@@ -641,13 +653,16 @@ const capNote = document.getElementById('capNote');
 
 capForm.addEventListener('submit', async (e) => {
   e.preventDefault();
-  const email = document.getElementById('email').value.trim();
+  const emailEl = document.getElementById('email');
+  const email = emailEl.value.trim();
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    document.getElementById('email').focus();
+    emailEl.setAttribute('aria-invalid', 'true');
+    emailEl.focus();
     capNote.textContent = "Please enter a valid email address.";
     capNote.style.color = "#E6B566";
     return;
   }
+  emailEl.removeAttribute('aria-invalid');
   // record locally always (so you never lose a signup during testing)
   try {
     const list = JSON.parse(localStorage.getItem('letfile_signups') || '[]');

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy Notice · LetFile</title>
+<meta name="description" content="How LetFile (a product of Gojin Ltd) collects, uses and protects your personal data.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f6f2e9;--surface:#fbf8f1;--ink:#17231c;--muted:#4c5a50;--green:#1f4d3a;--ochre-ink:#8a5a12;--line:rgba(23,35,28,.13);
+  --font-display:'Fraunces',Georgia,serif;--font-body:'Hanken Grotesk',ui-sans-serif,system-ui,sans-serif;--r-sm:9px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.6}
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--green);color:var(--paper);padding:.6em 1em;font-weight:600;border-radius:0 0 var(--r-sm) 0}
+.skip:focus{left:0}
+header.bar{border-bottom:1px solid var(--line);background:var(--surface)}
+.bar-in{max-width:760px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;gap:.5em}
+.logo{font-family:var(--font-display);font-weight:600;font-size:1.2rem;color:var(--ink);text-decoration:none}
+main{max-width:760px;margin:0 auto;padding:40px 24px 80px}
+h1{font-family:var(--font-display);font-weight:500;font-size:2.1rem;line-height:1.1;margin:0 0 6px}
+h2{font-family:var(--font-display);font-weight:500;font-size:1.3rem;margin:34px 0 8px}
+.meta{color:var(--muted);font-size:.92rem;margin-bottom:8px}
+.note{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--ochre-ink);border-radius:var(--r-sm);padding:12px 16px;font-size:.92rem;color:var(--muted);margin:18px 0}
+a{color:var(--green)}
+table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.95rem}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:600}
+code{background:#efe8d9;padding:.1em .4em;border-radius:5px;font-size:.9em}
+footer{max-width:760px;margin:0 auto;padding:24px;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem}
+footer a{color:var(--muted)}
+a:focus-visible{outline:3px solid var(--green);outline-offset:2px;border-radius:3px}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar"><div class="bar-in"><a class="logo" href="/">LetFile</a></div></header>
+<main id="main">
+<h1>Privacy Notice</h1>
+<p class="meta"><strong>Last updated:</strong> 21 June 2026 · <strong>Data controller:</strong> Gojin Ltd (company number 15323363), England &amp; Wales · <strong>Registered address:</strong> <span>[REGISTERED ADDRESS]</span> · <strong>ICO registration:</strong> <span>[ICO REG NO]</span> · <strong>Contact:</strong> <a href="mailto:privacy@letfile.co.uk">privacy@letfile.co.uk</a>.</p>
+
+<p>LetFile is software that helps UK landlords meet their Making Tax Digital for Income Tax obligations. This notice explains what personal data we process, why, our lawful basis, where it is held, and your rights. It is written to meet UK GDPR and the Data Protection Act 2018.</p>
+
+<h2>1. What we collect</h2>
+<ul>
+<li><strong>Account data:</strong> your name and email address.</li>
+<li><strong>Tax data you enter:</strong> property income and expenses, ownership shares, your <strong>National Insurance number</strong> and tax references. This is sensitive financial data and we treat it accordingly.</li>
+<li><strong>HMRC authorisation:</strong> OAuth access and refresh tokens that let us file on your behalf. We never see or store your Government Gateway password.</li>
+<li><strong>Fraud-prevention data:</strong> device identifiers, IP address, browser and connection metadata. HMRC legally requires us to send this with each submission (the fraud-prevention headers, SI 2019/360).</li>
+<li><strong>Usage data:</strong> basic server logs for security and reliability.</li>
+</ul>
+
+<h2>2. Why, and our lawful basis</h2>
+<table>
+<tr><th>Purpose</th><th>Lawful basis</th></tr>
+<tr><td>Provide the filing service (store records, submit to HMRC)</td><td>Performance of our contract with you</td></tr>
+<tr><td>Act on your behalf with HMRC</td><td>Your authorisation via OAuth</td></tr>
+<tr><td>Send fraud-prevention header data to HMRC</td><td>Legal obligation (SI 2019/360)</td></tr>
+<tr><td>Deadline reminders and service emails</td><td>Contract and legitimate interests</td></tr>
+<tr><td>Security, fraud prevention, troubleshooting</td><td>Legitimate interests</td></tr>
+</table>
+
+<h2>3. Where your data is processed (server locations)</h2>
+<p>LetFile runs on Google Cloud Platform. We use sub-processors under data processing agreements; we do not sell your data.</p>
+<table>
+<tr><th>Provider</th><th>Role</th><th>Location</th></tr>
+<tr><td>Google Cloud (Cloud Run)</td><td>Application compute</td><td>europe-west1 (Belgium, EU)</td></tr>
+<tr><td>Google Cloud (Firestore)</td><td>Database (your records, tokens)</td><td>europe-west2 (London, UK)</td></tr>
+<tr><td>Resend</td><td>Transactional / reminder email</td><td>EU/US (email delivery)</td></tr>
+<tr><td>Cloudflare</td><td>DNS and network</td><td>Global edge</td></tr>
+<tr><td>HMRC</td><td>Recipient of your submissions</td><td>UK</td></tr>
+</table>
+
+<h2>4. International transfers</h2>
+<p>Your records and tokens are stored in the UK (London) and the application runs in the EU (Belgium); the UK recognises the EU as adequate. Where any sub-processor transfers data outside the UK/EU, that transfer relies on an adequacy decision or appropriate safeguards (such as the UK IDTA or Standard Contractual Clauses).</p>
+
+<h2>5. Retention</h2>
+<ul>
+<li><strong>Tax records:</strong> kept while your account is active and for at least the statutory record-keeping period (broadly 5 years and 10 months after the relevant tax year) to support compliance, then deleted.</li>
+<li><strong>OAuth tokens:</strong> kept until you withdraw authorisation or close your account, then deleted.</li>
+</ul>
+
+<h2>6. Security</h2>
+<p>We encrypt data in transit (TLS) and we encrypt the most sensitive fields (OAuth tokens and your National Insurance number) at rest with AES-256, on top of the platform's own at-rest encryption. Access is on a least-privilege basis and secrets are held in Google Secret Manager. No system is perfectly secure, but we take appropriate technical and organisational measures and will notify you and the ICO of any qualifying breach within 72 hours.</p>
+
+<h2>7. Your rights</h2>
+<p>You can access, correct, export, delete or restrict your data, object to processing, and withdraw consent (which stops future filings). Inside LetFile you can export an owner's data and delete it directly; you can also disconnect an owner from HMRC at any time. To exercise any right, contact <a href="mailto:privacy@letfile.co.uk">privacy@letfile.co.uk</a>. You can complain to the <a href="https://ico.org.uk" rel="noopener">ICO</a>.</p>
+
+<h2>8. Automated decisions</h2>
+<p>We do not make solely automated decisions with legal or similarly significant effects. Tax estimates are indicative; you review and confirm every submission.</p>
+
+<p class="note">LetFile is software, not tax advice, and is not affiliated with HMRC. You remain responsible for your own return. See our <a href="/terms.html">Terms of Service</a>.</p>
+</main>
+<footer><a href="/">← Back to LetFile</a> · <a href="/terms.html">Terms</a> · <a href="/.well-known/security.txt">Security</a></footer>
+</body>
+</html>
