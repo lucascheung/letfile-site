@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MTD for jointly owned property: how couples and co-owners file | LetFile</title>
+<meta name="description" content="Making Tax Digital for jointly owned property, explained. Each co-owner files their own share, so couples face two sets of quarterly updates. How the split works, Form 17, Section 24, deadlines, and how to file it the easy way." />
+<link rel="canonical" href="https://letfile.co.uk/mtd-for-jointly-owned-property.html" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="apple-touch-icon" href="/favicon.svg">
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="MTD for jointly owned property: how couples and co-owners file" />
+<meta property="og:description" content="Each co-owner files their own share under Making Tax Digital, so a jointly-owned property means two sets of quarterly updates. Here's how the split, Form 17 and Section 24 work, and how to file it simply." />
+<meta property="og:url" content="https://letfile.co.uk/mtd-for-jointly-owned-property.html" />
+<meta property="og:site_name" content="LetFile" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"If we own a property jointly, do we both have to do Making Tax Digital?","acceptedAnswer":{"@type":"Answer","text":"Yes. Each co-owner is a separate taxpayer and reports their own share of the rental income and expenses. If you own a property 50/50, you each file your own quarterly updates and your own final declaration, so a jointly-owned property means two complete sets of MTD filings, not one."}},
+    {"@type":"Question","name":"How is the rental income split between joint owners for MTD?","acceptedAnswer":{"@type":"Answer","text":"You split income and expenses by beneficial ownership share. Married couples and civil partners who jointly own are taxed 50/50 by default, unless they make a Form 17 election to be taxed on their actual unequal shares. Unmarried joint owners are taxed on their actual beneficial ownership shares."}},
+    {"@type":"Question","name":"What is a Form 17 election?","acceptedAnswer":{"@type":"Answer","text":"Form 17 lets married couples and civil partners who own property in unequal shares elect to be taxed on those actual shares instead of the default 50/50. It only applies where you genuinely own the property in unequal proportions and can evidence it, and both of you must sign it."}},
+    {"@type":"Question","name":"Does each owner get the Section 24 mortgage interest treatment separately?","acceptedAnswer":{"@type":"Answer","text":"Yes. Residential mortgage interest is not deducted from rental profit; instead each owner gets a basic-rate (20%) tax credit on their share of the finance costs. Because each co-owner files separately, the Section 24 credit is applied to each owner's own share."}},
+    {"@type":"Question","name":"Can one person file for both of us?","acceptedAnswer":{"@type":"Answer","text":"The filing can be done by one person, but each owner must still authorise HMRC personally once (HMRC requires each taxpayer's own consent). After that, one account can file the quarterly updates for both owners. LetFile is built to do exactly this."}}
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --paper:#F6F2E9; --paper-2:#EFE8D9; --ink:#17231C; --muted:#4C5A50;
+    --green:#1F4D3A; --green-deep:#163A2C; --ochre:#B97A28; --ochre-ink:#8A5A12;
+    --ochre-soft:#F1E2C4; --terra:#A8472A; --line:rgba(23,35,28,0.14); --line-soft:rgba(23,35,28,0.08);
+    --shadow:0 1px 2px rgba(23,35,28,.06), 0 12px 32px -12px rgba(23,35,28,.18);
+    --r:14px; --r-sm:10px;
+    --font-display:'Fraunces', Georgia, 'Times New Roman', serif;
+    --font-body:'Hanken Grotesk', ui-sans-serif, system-ui, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;}
+  body{margin:0;font-family:var(--font-body);color:var(--ink);background:var(--paper);line-height:1.65;}
+  body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.22'/%3E%3C/svg%3E");}
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px;}
+  a{color:var(--green);text-underline-offset:2px;}
+
+  header.bar{border-bottom:1px solid var(--line-soft);background:rgba(246,242,233,.85);backdrop-filter:blur(8px);position:sticky;top:0;z-index:10;}
+  .bar-in{max-width:1140px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;}
+  .logo{font-family:var(--font-display);font-weight:600;font-size:1.3rem;color:var(--green);text-decoration:none;display:flex;align-items:center;gap:.4em;}
+  .logo .mark{width:16px;height:16px;border-radius:50%;background:var(--ochre);display:inline-block;}
+  .btn{display:inline-flex;align-items:center;gap:.5em;font-family:var(--font-body);font-weight:600;font-size:.96rem;padding:.7em 1.2em;border-radius:var(--r-sm);border:1px solid transparent;text-decoration:none;cursor:pointer;transition:transform .12s ease;}
+  .btn:hover{transform:translateY(-1px);}
+  .btn-primary{background:var(--green);color:#F6F2E9;box-shadow:var(--shadow);}
+  .btn-ghost{background:transparent;border-color:var(--line);color:var(--ink);}
+  .btn-lg{padding:1em 1.6em;font-size:1.05rem;}
+
+  .crumb{font-size:.85rem;color:var(--muted);padding:26px 0 0;}
+  h1{font-family:var(--font-display);font-weight:600;font-size:clamp(2rem,5vw,2.9rem);line-height:1.1;letter-spacing:-.01em;margin:.3em 0 .2em;}
+  .standfirst{font-size:1.2rem;color:var(--muted);margin:0 0 1.4em;}
+  h2{font-family:var(--font-display);font-weight:600;font-size:1.65rem;line-height:1.2;margin:1.9em 0 .4em;}
+  h3{font-family:var(--font-display);font-weight:600;font-size:1.22rem;margin:1.5em 0 .3em;}
+  p,li{font-size:1.06rem;}
+  main p{margin:.7em 0;}
+  ul,ol{padding-left:1.3em;} li{margin:.35em 0;}
+  strong{font-weight:600;}
+  .lede-meta{font-size:.9rem;color:var(--muted);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);padding:12px 0;margin:1.4em 0;}
+
+  .callout{background:var(--paper-2);border:1px solid var(--line);border-left:3px solid var(--ochre);border-radius:var(--r-sm);padding:16px 20px;margin:1.4em 0;}
+  .callout.key{border-left-color:var(--green);}
+  .callout h3{margin:.1em 0 .3em;font-size:1.08rem;}
+  .callout p:last-child{margin-bottom:0;}
+
+  table.split{width:100%;border-collapse:collapse;margin:1.2em 0;font-size:1rem;}
+  table.split th,table.split td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);}
+  table.split th{font-weight:600;background:var(--paper-2);}
+  .tnum{font-variant-numeric:tabular-nums;}
+
+  details.q{border:1px solid var(--line);border-radius:var(--r-sm);padding:4px 18px;margin:10px 0;background:var(--paper-2);}
+  details.q summary{cursor:pointer;font-weight:600;padding:12px 0;list-style:none;}
+  details.q summary::-webkit-details-marker{display:none;}
+  details.q summary::after{content:"+";float:right;color:var(--ochre-ink);font-weight:700;}
+  details.q[open] summary::after{content:"–";}
+  details.q .a{padding:0 0 14px;color:var(--muted);}
+
+  .cta-band{background:var(--green);color:#F3EEE1;border-radius:var(--r);padding:34px 30px;margin:2.4em 0 1em;text-align:center;}
+  .cta-band h2{color:#fff;margin:0 0 .2em;}
+  .cta-band p{color:#CFE0D2;margin:.2em auto 1.2em;max-width:46ch;}
+  .cta-band .btn-primary{background:#E6B566;color:var(--green-deep);}
+
+  footer{border-top:1px solid var(--line-soft);margin-top:40px;padding:26px 0;color:var(--muted);font-size:.88rem;}
+  footer a{color:var(--muted);}
+  .disc{font-size:.84rem;color:var(--muted);font-style:italic;margin-top:1.6em;}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="bar-in">
+    <a href="/" class="logo"><span class="mark"></span>LetFile</a>
+    <a href="https://app.letfile.co.uk" class="btn btn-ghost">Get started</a>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+  <div class="crumb"><a href="/">Home</a> / Guides / MTD for jointly owned property</div>
+  <h1>Making Tax Digital for jointly owned property</h1>
+  <p class="standfirst">If you own a rental property with someone else, Making Tax Digital doesn't treat you as
+  one landlord. It treats you as two. Here's exactly what that means, and how to file it without doing
+  everything twice by hand.</p>
+  <div class="lede-meta">UK Making Tax Digital for Income Tax &middot; written for jointly-owned (couple and
+  co-owned) property &middot; last reviewed November 2026</div>
+
+  <p>Making Tax Digital for Income Tax (MTD ITSA) is now live. From 6 April 2026 it applies to landlords whose
+  combined gross property and self-employment income is over <strong>£50,000</strong>; the threshold falls to
+  <strong>£30,000</strong> from April 2027 and <strong>£20,000</strong> from April 2028. If that's you, you no
+  longer file one Self Assessment a year. You keep digital records and send HMRC <strong>four quarterly
+  updates plus a final declaration</strong> every year.</p>
+
+  <p>That's a big enough change on its own. But if the property is <strong>jointly owned</strong>, there's a
+  catch almost nobody spells out clearly.</p>
+
+  <h2>The core rule: each owner files their own share</h2>
+  <p>Under MTD, a jointly-owned property is not filed once by "the household". Each co-owner is a
+  <strong>separate taxpayer</strong> who reports <strong>their own share</strong> of the income and expenses,
+  under their own National Insurance number, through their own HMRC authorisation.</p>
+
+  <p>So a couple who own one flat 50/50 don't have five filings between them. They have <strong>ten</strong>:
+  four quarterly updates and a final declaration <em>each</em>. Every rent receipt and every expense has to be
+  split down the middle and reported twice.</p>
+
+  <div class="callout key">
+    <h3>In plain numbers</h3>
+    <p>One jointly-owned property, two owners, equals <strong>2 sets of digital records</strong>,
+    <strong>8 quarterly updates</strong> and <strong>2 final declarations</strong> a year. Miss any one of
+    them and HMRC's points-based penalty system starts ticking.</p>
+  </div>
+
+  <h2>How do you split the income between joint owners?</h2>
+  <p>You split by <strong>beneficial ownership share</strong>, the share of the property each person actually
+  owns. There are two common situations:</p>
+
+  <table class="split">
+    <tr><th>Your situation</th><th>Default split for tax</th></tr>
+    <tr><td>Married couple or civil partners, jointly owned</td><td><strong>50/50</strong> automatically, whatever the deeds say, unless you file a <strong>Form 17</strong> election</td></tr>
+    <tr><td>Unmarried co-owners (partners, friends, family, business partners)</td><td>Your <strong>actual beneficial ownership shares</strong> (for example 60/40 if that's how you own it)</td></tr>
+  </table>
+
+  <p>Once you know the split, you apply it to <strong>every figure</strong>: rent, letting agent fees, repairs,
+  insurance, mortgage interest, the lot. Each owner reports only their slice.</p>
+
+  <h3>Form 17: when married couples don't want 50/50</h3>
+  <p>If you're married or in a civil partnership and you genuinely own the property in <strong>unequal
+  shares</strong> (say 75/25), you can make a <strong>Form 17 election</strong> to be taxed on those actual
+  shares instead of the default 50/50. It only works where the unequal beneficial ownership is real and
+  evidenced, and both of you must sign it. Many couples never need it; but if one partner is a higher-rate
+  taxpayer, getting the split right matters.</p>
+
+  <h2>Section 24 applies to each owner separately</h2>
+  <p>For residential property you can't simply deduct mortgage interest from your rental profit. Under
+  <strong>Section 24</strong>, finance costs instead give you a <strong>basic-rate (20%) tax credit</strong>.
+  Because joint owners file separately, that credit is worked out on <strong>each owner's own share</strong> of
+  the interest. Get the apportionment wrong and you can misstate both owners' tax.</p>
+
+  <div class="callout">
+    <h3>Worked example</h3>
+    <p>A couple own a flat 50/50. In a quarter they receive £7,200 rent, pay £1,600 running costs and £2,400
+    mortgage interest. Each owner reports <strong>£3,600 rent</strong>, <strong>£800 costs</strong> and
+    <strong>£1,200 interest</strong>, and each gets the Section 24 credit on their own £1,200. Two filings,
+    every number halved, every quarter.</p>
+  </div>
+
+  <h2>Do we both have to authorise HMRC?</h2>
+  <p>Yes. HMRC requires <strong>each taxpayer to grant their own authorisation</strong> once (you sign in with
+  your own Government Gateway and consent). After that, the actual quarterly filing can be done by one person
+  for both owners, you don't both have to log in every quarter. But the consent itself is personal and can't be
+  delegated away.</p>
+
+  <h2>The honest problem for couples</h2>
+  <p>Most MTD software is built for a single taxpayer with a single set of books. It has no concept of "this
+  property is owned by two people who each need their own return". So couples are left to either:</p>
+  <ul>
+    <li>run <strong>two separate software subscriptions</strong> and hand-split every figure between them, or</li>
+    <li>pay an <strong>accountant</strong> to do the apportionment (typically £150 to £300+ a year, each), or</li>
+    <li>keep a spreadsheet and hope the halves reconcile.</li>
+  </ul>
+  <p>All three are more work, more cost and more chance of a slip, four times a year, forever.</p>
+
+  <h2>How LetFile does it</h2>
+  <p>LetFile is built specifically for jointly-owned property. You enter the property and the ownership split
+  <strong>once</strong>. Then, each quarter, you log the income and expenses, and LetFile:</p>
+  <ul>
+    <li>apportions <strong>every figure</strong> to each owner's share, penny-perfectly;</li>
+    <li>files a separate cumulative update <strong>under each owner's own HMRC authorisation</strong>;</li>
+    <li>handles Section 24 on each owner's share;</li>
+    <li>shows each owner's estimated tax and submits each final declaration at year end.</li>
+  </ul>
+  <p>It files directly to HMRC through the official Making Tax Digital API. One person sets it up; both owners
+  are handled. The Couple plan covers <strong>both of you</strong> for <strong>£49 a year</strong>, less than a
+  single accountant's fee, and far less than two separate software subscriptions.</p>
+
+  <div class="cta-band">
+    <h2>Own a property together? We'll file for both of you.</h2>
+    <p>Set up your owners and property once; LetFile splits every figure and files separately for each of you.
+    Free to set up, you only pay when you file.</p>
+    <a href="https://app.letfile.co.uk" class="btn btn-primary btn-lg">Get started free &rarr;</a>
+  </div>
+
+  <h2>Frequently asked questions</h2>
+
+  <details class="q"><summary>If we own a property jointly, do we both have to do MTD?</summary>
+    <div class="a">Yes. Each co-owner is a separate taxpayer and reports their own share of the rental income
+    and expenses. If you own 50/50, you each file your own quarterly updates and your own final declaration, so
+    one jointly-owned property means two complete sets of MTD filings.</div></details>
+
+  <details class="q"><summary>How is the rental income split between joint owners?</summary>
+    <div class="a">By beneficial ownership share. Married couples and civil partners are taxed 50/50 by default
+    unless they file a Form 17 election for their actual unequal shares. Unmarried co-owners are taxed on their
+    actual ownership shares.</div></details>
+
+  <details class="q"><summary>What is a Form 17 election?</summary>
+    <div class="a">It lets married couples and civil partners who own a property in unequal shares elect to be
+    taxed on those actual shares instead of the default 50/50. It only applies where the unequal beneficial
+    ownership is genuine and evidenced, and both partners must sign it.</div></details>
+
+  <details class="q"><summary>Does Section 24 apply to each owner?</summary>
+    <div class="a">Yes. Residential mortgage interest isn't deducted from profit; each owner instead gets a
+    basic-rate (20%) tax credit on their own share of the finance costs, because each co-owner files
+    separately.</div></details>
+
+  <details class="q"><summary>Can one of us file for both?</summary>
+    <div class="a">The filing can be done by one person, but each owner must authorise HMRC personally once
+    (HMRC requires each taxpayer's own consent). After that, one account files the quarterly updates for both.
+    LetFile is built to do exactly this.</div></details>
+
+  <details class="q"><summary>Am I even affected by MTD yet?</summary>
+    <div class="a">MTD ITSA applies from April 2026 at £50,000 of combined gross property and self-employment
+    income, April 2027 at £30,000, and April 2028 at £20,000. <a href="/#check">Use the checker on our
+    homepage</a> to see your own date.</div></details>
+
+  <p class="disc">This guide is general information, not tax advice, and is accurate to the best of our
+  knowledge as of November 2026. Thresholds, rules and dates can change; always check your own position on
+  <a href="https://www.gov.uk/guidance/check-if-youre-eligible-for-making-tax-digital-for-income-tax">GOV.UK</a>
+  or with a qualified accountant. LetFile is an independent product and is not affiliated with or endorsed by
+  HMRC.</p>
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="/">LetFile home</a> &middot; <a href="/#check">Am I affected?</a> &middot;
+    <a href="/#pricing">Pricing</a> &middot; <a href="https://app.letfile.co.uk">Get started</a> &middot;
+    <a href="/privacy.html">Privacy</a> &middot; <a href="/terms.html">Terms</a></p>
+    <p>LetFile files your Making Tax Digital updates directly to HMRC. A product of Gojin Ltd (company number
+    15323363).</p>
+  </div>
+</footer>
+
+</body>
+</html>
