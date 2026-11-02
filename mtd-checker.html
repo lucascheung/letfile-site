@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Am I affected by Making Tax Digital? Free MTD checker | LetFile</title>
+<meta name="description" content="Free Making Tax Digital checker. Enter your self-employment and rental income to see instantly whether MTD for Income Tax applies to you, which tax year you're brought in, and your exact quarterly deadlines." />
+<link rel="canonical" href="https://letfile.co.uk/mtd-checker.html" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="apple-touch-icon" href="/favicon.svg">
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Am I affected by Making Tax Digital? Free MTD checker" />
+<meta property="og:description" content="Enter your income and see instantly whether MTD for Income Tax applies to you, from which year, and your deadlines." />
+<meta property="og:url" content="https://letfile.co.uk/mtd-checker.html" />
+<meta property="og:site_name" content="LetFile" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--paper:#F6F2E9;--paper-2:#EFE8D9;--ink:#17231C;--muted:#4C5A50;--green:#1F4D3A;--green-deep:#163A2C;--ochre:#B97A28;--ochre-ink:#8A5A12;--ochre-soft:#F1E2C4;--sage:#E1E9DA;--sage-line:#C9D6C2;--terra:#A8472A;--line:rgba(23,35,28,0.14);--line-soft:rgba(23,35,28,0.08);--shadow:0 1px 2px rgba(23,35,28,.06),0 12px 32px -12px rgba(23,35,28,.18);--shadow-lg:0 2px 4px rgba(23,35,28,.05),0 30px 60px -22px rgba(23,35,28,.30);--r:14px;--r-sm:10px;--font-display:'Fraunces',Georgia,serif;--font-body:'Hanken Grotesk',ui-sans-serif,system-ui,sans-serif;}
+  *{box-sizing:border-box;}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;}
+  body{margin:0;font-family:var(--font-body);color:var(--ink);background:var(--paper);line-height:1.65;}
+  body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.22'/%3E%3C/svg%3E");}
+  .wrap{max-width:900px;margin:0 auto;padding:0 24px;}
+  .narrow{max-width:720px;}
+  a{color:var(--green);text-underline-offset:2px;}
+  header.bar{border-bottom:1px solid var(--line-soft);background:rgba(246,242,233,.85);backdrop-filter:blur(8px);position:sticky;top:0;z-index:10;}
+  .bar-in{max-width:1140px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;}
+  .logo{font-family:var(--font-display);font-weight:600;font-size:1.3rem;color:var(--green);text-decoration:none;display:flex;align-items:center;gap:.4em;}
+  .logo .mark{width:16px;height:16px;border-radius:50%;background:var(--ochre);display:inline-block;}
+  .btn{display:inline-flex;align-items:center;gap:.5em;font-weight:600;font-size:.96rem;padding:.7em 1.2em;border-radius:var(--r-sm);border:1px solid transparent;text-decoration:none;cursor:pointer;transition:transform .12s ease;}
+  .btn:hover{transform:translateY(-1px);}.btn-primary{background:var(--green);color:#F6F2E9;box-shadow:var(--shadow);}
+  .btn-ghost{background:transparent;border-color:var(--line);color:var(--ink);}
+  .crumb{font-size:.85rem;color:var(--muted);padding:26px 0 0;}
+  h1{font-family:var(--font-display);font-weight:600;font-size:clamp(2rem,5vw,2.9rem);line-height:1.1;letter-spacing:-.01em;margin:.3em 0 .2em;}
+  .standfirst{font-size:1.2rem;color:var(--muted);margin:0 0 1.2em;}
+  h2{font-family:var(--font-display);font-weight:600;font-size:1.55rem;line-height:1.2;margin:1.8em 0 .4em;}
+  p,li{font-size:1.06rem;}main p{margin:.7em 0;}ul{padding-left:1.3em;}li{margin:.35em 0;}strong{font-weight:600;}
+  .disc{font-size:.84rem;color:var(--muted);font-style:italic;margin-top:1.6em;}
+  footer{border-top:1px solid var(--line-soft);margin-top:40px;padding:26px 0;color:var(--muted);font-size:.88rem;}footer a{color:var(--muted);}
+  /* checker */
+  .checker-wrap{display:grid;grid-template-columns:.92fr 1.08fr;gap:40px;align-items:start;margin:28px 0 8px;}
+  @media(max-width:880px){.checker-wrap{grid-template-columns:1fr;gap:26px;}}
+  .checker{background:#FBF8F1;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow-lg);padding:30px;}
+  .field{margin-bottom:20px;}.field label{display:block;font-weight:600;font-size:.98rem;margin-bottom:6px;}
+  .field .hint{font-size:.82rem;color:var(--muted);margin-bottom:10px;}
+  .money{position:relative;}.money .sign{position:absolute;left:15px;top:50%;transform:translateY(-50%);color:var(--muted);font-weight:600;}
+  .money input{width:100%;font-family:var(--font-body);font-size:1.18rem;font-weight:600;padding:14px 14px 14px 30px;border:1.5px solid var(--line);border-radius:var(--r-sm);background:var(--paper);color:var(--ink);transition:border-color .15s,box-shadow .15s;font-variant-numeric:tabular-nums;}
+  .money input:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 4px var(--sage);}
+  .combined{display:flex;justify-content:space-between;align-items:baseline;padding:14px 2px 2px;border-top:1px dashed var(--sage-line);margin-top:4px;}
+  .combined span{color:var(--muted);font-size:.92rem;}.combined b{font-family:var(--font-display);font-size:1.6rem;font-weight:600;font-variant-numeric:tabular-nums;}
+  .verdict{border-radius:var(--r);padding:28px;border:1px solid var(--line);background:var(--paper-2);display:flex;flex-direction:column;min-height:260px;}
+  .verdict.empty{align-items:center;justify-content:center;text-align:center;color:var(--muted);}
+  .verdict.empty .big{font-family:var(--font-display);font-size:1.3rem;color:var(--ink);margin-bottom:.3em;}
+  .verdict .v-tag{display:inline-flex;align-self:flex-start;align-items:center;gap:.5em;font-weight:600;font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;padding:.4em .8em;border-radius:100px;margin-bottom:16px;}
+  .v-affected .v-tag{background:var(--ochre-soft);color:#8A5A12;border:1px solid #E2C690;}
+  .v-clear .v-tag{background:var(--sage);color:var(--green);border:1px solid var(--sage-line);}
+  .verdict h3{font-size:1.5rem;margin-bottom:.4em;}.verdict .v-body{color:var(--muted);font-size:1rem;}
+  .v-deadlines{list-style:none;padding:0;margin:18px 0 0;border-top:1px solid var(--line);padding-top:16px;}
+  .v-deadlines li{display:flex;justify-content:space-between;font-size:.92rem;padding:6px 0;font-variant-numeric:tabular-nums;}
+  .v-deadlines li span:first-child{color:var(--muted);}.v-deadlines li b{font-weight:600;}
+  .v-cta{margin-top:20px;}.v-cta .btn-primary{background:var(--green);color:#F6F2E9;}
+  .disc-note{font-size:.78rem;color:var(--muted);margin-top:14px;}
+  .related{background:var(--paper-2);border:1px solid var(--line-soft);border-radius:var(--r-sm);padding:14px 20px;margin:1.6em 0;}.related strong{display:block;margin-bottom:4px;}
+</style>
+</head>
+<body>
+<header class="bar"><div class="bar-in"><a href="/" class="logo"><span class="mark"></span>LetFile</a><a href="https://app.letfile.co.uk" class="btn btn-ghost">Get started</a></div></header>
+<main><div class="wrap">
+  <div class="crumb"><a href="/">Home</a> / Am I affected by MTD?</div>
+  <h1>Am I affected by Making Tax Digital?</h1>
+  <p class="standfirst">Enter your income below. In a few seconds you'll know whether MTD for Income Tax
+  applies to you, which tax year brings you in, and your exact deadlines. No sign-up, nothing stored.</p>
+
+  <div class="checker-wrap">
+    <div class="checker">
+      <div class="field">
+        <label for="se">Self-employment income</label>
+        <div class="hint">Annual turnover from any sole-trade business, before expenses. £0 if none.</div>
+        <div class="money"><span class="sign">£</span><input id="se" type="text" inputmode="numeric" placeholder="0" autocomplete="off"></div>
+      </div>
+      <div class="field">
+        <label for="prop">Property / rental income</label>
+        <div class="hint">Total annual rent received, your full share before expenses.</div>
+        <div class="money"><span class="sign">£</span><input id="prop" type="text" inputmode="numeric" placeholder="0" autocomplete="off"></div>
+      </div>
+      <div class="combined"><span>Your qualifying income</span><b id="combined" aria-live="polite">£0</b></div>
+    </div>
+    <div class="verdict empty" id="verdict" role="status" aria-live="polite" aria-atomic="true">
+      <div><div class="big">Enter your figures</div><p style="margin:0">We'll tell you whether, and exactly when, Making Tax Digital applies to you, with your deadlines.</p></div>
+    </div>
+  </div>
+
+  <div class="narrow">
+  <h2>How the check works</h2>
+  <p>Making Tax Digital for Income Tax is phased in by income. You're brought in when your
+  <strong>qualifying income</strong>, your gross self-employment plus property income combined, before
+  expenses, crosses the threshold for that year:</p>
+  <ul>
+    <li>over <strong>£50,000</strong>, you're in from <strong>6 April 2026</strong>;</li>
+    <li>over <strong>£30,000</strong>, from <strong>6 April 2027</strong>;</li>
+    <li>over <strong>£20,000</strong>, from <strong>6 April 2028</strong>.</li>
+  </ul>
+  <p>It's your <strong>turnover, not your profit</strong>, so a landlord with £55,000 of rent and a big
+  mortgage is still over the £50,000 line. Once you're in, you send four quarterly updates and a final
+  declaration each year instead of one Self Assessment.</p>
+
+  <div class="related">
+    <strong>Own a property jointly?</strong>
+    Your qualifying income is <em>your share</em>, so a couple splitting the rent are each measured on half.
+    See <a href="/mtd-for-jointly-owned-property.html">MTD for jointly owned property</a> and the
+    <a href="/mtd-income-tax-deadlines.html">full deadlines guide</a>.
+  </div>
+
+  <h2>What to do if you're in</h2>
+  <p>You'll need MTD-compatible software to file; you can't type totals into the HMRC website any more. LetFile
+  does exactly the five filings, handles <a href="/section-24-landlords-explained.html">Section 24</a>, and
+  splits everything automatically if you own jointly. Free to set up; you only pay when you file.</p>
+
+  <p class="disc">This checker is a quick guide, not tax advice, based on the thresholds announced as of
+  November 2026. Always confirm your own position on
+  <a href="https://www.gov.uk/guidance/check-if-youre-eligible-for-making-tax-digital-for-income-tax">GOV.UK</a>
+  or with a qualified accountant. LetFile is independent and not affiliated with or endorsed by HMRC.</p>
+  </div>
+</div></main>
+<footer><div class="wrap">
+  <p><a href="/">LetFile home</a> &middot; <a href="/mtd-for-jointly-owned-property.html">Jointly owned property</a> &middot; <a href="/section-24-landlords-explained.html">Section 24</a> &middot; <a href="/mtd-income-tax-deadlines.html">MTD deadlines</a> &middot; <a href="https://app.letfile.co.uk">Get started</a> &middot; <a href="/privacy.html">Privacy</a> &middot; <a href="/terms.html">Terms</a></p>
+  <p>LetFile files your Making Tax Digital updates directly to HMRC. A product of Gojin Ltd (company number 15323363).</p>
+</div></footer>
+
+<script>
+const seEl=document.getElementById('se'),propEl=document.getElementById('prop'),combinedEl=document.getElementById('combined'),verdictEl=document.getElementById('verdict');
+const gbp=n=>'£'+Math.round(n).toLocaleString('en-GB');
+function cleanNum(el){let raw=el.value.replace(/[^0-9]/g,'');el.value=raw?Number(raw).toLocaleString('en-GB'):'';return raw?parseInt(raw,10):0;}
+function cohort(t){if(t>50000)return{year:'2026/27',startYr:2026,from:'6 April 2026',now:true};if(t>30000)return{year:'2027/28',startYr:2027,from:'6 April 2027',now:false};if(t>20000)return{year:'2028/29',startYr:2028,from:'6 April 2028',now:false};return null;}
+function deadlines(s){return[['Quarter 1 update',`7 Aug ${s}`],['Quarter 2 update',`7 Nov ${s}`],['Quarter 3 update',`7 Feb ${s+1}`],['Quarter 4 update',`7 May ${s+1}`],['Final declaration',`31 Jan ${s+2}`]];}
+function render(){
+  const total=cleanNum(seEl)+cleanNum(propEl);combinedEl.textContent=gbp(total);
+  if(total<=0){verdictEl.className='verdict empty';verdictEl.innerHTML=`<div><div class="big">Enter your figures</div><p style="margin:0">We'll tell you whether, and exactly when, Making Tax Digital applies to you, with your deadlines.</p></div>`;return;}
+  const c=cohort(total);
+  if(!c){verdictEl.className='verdict v-clear';verdictEl.innerHTML=`<span class="v-tag"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Not yet</span><h3>You're below the threshold for now.</h3><p class="v-body">At ${gbp(total)} you're under the current £20,000 floor, so MTD doesn't apply to you yet. The threshold has fallen every year, so it's worth knowing when it will reach you.</p><div class="v-cta"><a href="/mtd-income-tax-deadlines.html" class="btn btn-primary">See the thresholds &rarr;</a></div><p class="disc-note">Qualifying income is gross, before expenses. Indicative only; check your position on GOV.UK.</p>`;return;}
+  const dl=deadlines(c.startYr).map(([k,v])=>`<li><span>${k}</span><b>${v}</b></li>`).join('');
+  verdictEl.className='verdict v-affected';verdictEl.innerHTML=`<span class="v-tag"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg> You're in${c.now?' now':''}</span><h3>MTD applies to you from ${c.from}.</h3><p class="v-body">Your qualifying income of <strong>${gbp(total)}</strong> puts you in the <strong>${c.year}</strong> tax year, four quarterly updates and a final declaration${c.now?'. The first deadline is close.':' once it begins.'}</p><ul class="v-deadlines">${dl}</ul><div class="v-cta"><a href="https://app.letfile.co.uk" class="btn btn-primary">File these the easy way &rarr;</a></div><p class="disc-note">Own jointly? Each of these happens for both owners, and we handle both. Indicative only; check GOV.UK.</p>`;
+}
+seEl.addEventListener('input',render);propEl.addEventListener('input',render);
+</script>
+</body>
+</html>

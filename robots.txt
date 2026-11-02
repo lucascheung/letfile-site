@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://letfile.co.uk/sitemap.xml

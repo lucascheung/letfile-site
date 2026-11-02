@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>LetFile for accountants: refer your landlord clients | LetFile</title>
+<meta name="description" content="A simple, cheap MTD filing tool for your landlord clients, especially jointly-owned property. Keep the low-margin clients happy without the low-margin work. How LetFile works for accountants and their clients." />
+<link rel="canonical" href="https://letfile.co.uk/for-accountants.html" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="apple-touch-icon" href="/favicon.svg">
+<meta property="og:type" content="website" />
+<meta property="og:title" content="LetFile for accountants: refer your landlord clients" />
+<meta property="og:description" content="The specialist MTD tool for jointly-owned property. Keep your simple landlord clients happy without the low-margin work." />
+<meta property="og:url" content="https://letfile.co.uk/for-accountants.html" />
+<meta property="og:site_name" content="LetFile" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--paper:#F6F2E9;--paper-2:#EFE8D9;--ink:#17231C;--muted:#4C5A50;--green:#1F4D3A;--green-deep:#163A2C;--ochre:#B97A28;--ochre-ink:#8A5A12;--terra:#A8472A;--line:rgba(23,35,28,0.14);--line-soft:rgba(23,35,28,0.08);--shadow:0 1px 2px rgba(23,35,28,.06),0 12px 32px -12px rgba(23,35,28,.18);--r:14px;--r-sm:10px;--font-display:'Fraunces',Georgia,serif;--font-body:'Hanken Grotesk',ui-sans-serif,system-ui,sans-serif;}
+  *{box-sizing:border-box;}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;}
+  body{margin:0;font-family:var(--font-body);color:var(--ink);background:var(--paper);line-height:1.65;}
+  body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.22'/%3E%3C/svg%3E");}
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px;}
+  a{color:var(--green);text-underline-offset:2px;}
+  header.bar{border-bottom:1px solid var(--line-soft);background:rgba(246,242,233,.85);backdrop-filter:blur(8px);position:sticky;top:0;z-index:10;}
+  .bar-in{max-width:1140px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;}
+  .logo{font-family:var(--font-display);font-weight:600;font-size:1.3rem;color:var(--green);text-decoration:none;display:flex;align-items:center;gap:.4em;}
+  .logo .mark{width:16px;height:16px;border-radius:50%;background:var(--ochre);display:inline-block;}
+  .btn{display:inline-flex;align-items:center;gap:.5em;font-weight:600;font-size:.96rem;padding:.7em 1.2em;border-radius:var(--r-sm);border:1px solid transparent;text-decoration:none;cursor:pointer;transition:transform .12s ease;}
+  .btn:hover{transform:translateY(-1px);}.btn-primary{background:var(--green);color:#F6F2E9;box-shadow:var(--shadow);}
+  .btn-ghost{background:transparent;border-color:var(--line);color:var(--ink);}.btn-lg{padding:1em 1.6em;font-size:1.05rem;}
+  .crumb{font-size:.85rem;color:var(--muted);padding:26px 0 0;}
+  h1{font-family:var(--font-display);font-weight:600;font-size:clamp(2rem,5vw,2.9rem);line-height:1.1;letter-spacing:-.01em;margin:.3em 0 .2em;}
+  .standfirst{font-size:1.2rem;color:var(--muted);margin:0 0 1.4em;}
+  h2{font-family:var(--font-display);font-weight:600;font-size:1.55rem;line-height:1.2;margin:1.9em 0 .4em;}
+  p,li{font-size:1.06rem;}main p{margin:.7em 0;}ul{padding-left:1.3em;}li{margin:.4em 0;}strong{font-weight:600;}
+  .lede-meta{font-size:.9rem;color:var(--muted);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);padding:12px 0;margin:1.4em 0;}
+  .callout{background:var(--paper-2);border:1px solid var(--line);border-left:3px solid var(--ochre);border-radius:var(--r-sm);padding:16px 20px;margin:1.4em 0;}
+  .callout.key{border-left-color:var(--green);}.callout p:last-child{margin-bottom:0;}
+  .cta-band{background:var(--green);color:#F3EEE1;border-radius:var(--r);padding:34px 30px;margin:2.4em 0 1em;text-align:center;}
+  .cta-band h2{color:#fff;margin:0 0 .2em;}.cta-band p{color:#CFE0D2;margin:.2em auto 1.2em;max-width:48ch;}
+  .cta-band .btn-primary{background:#E6B566;color:var(--green-deep);}
+  footer{border-top:1px solid var(--line-soft);margin-top:40px;padding:26px 0;color:var(--muted);font-size:.88rem;}footer a{color:var(--muted);}
+  .disc{font-size:.84rem;color:var(--muted);font-style:italic;margin-top:1.6em;}
+</style>
+</head>
+<body>
+<header class="bar"><div class="bar-in"><a href="/" class="logo"><span class="mark"></span>LetFile</a><a href="https://app.letfile.co.uk" class="btn btn-ghost">See the app</a></div></header>
+<main><div class="wrap">
+  <div class="crumb"><a href="/">Home</a> / For accountants</div>
+  <h1>LetFile for accountants</h1>
+  <p class="standfirst">A simple, cheap tool to hand your landlord clients, especially the jointly-owned ones,
+  so they stay compliant and happy without eating your margin.</p>
+  <div class="lede-meta">For accountants and bookkeepers with UK landlord clients</div>
+
+  <h2>The problem MTD just handed you</h2>
+  <p>Making Tax Digital for Income Tax turns one annual return into <strong>five filings a year</strong> per
+  client. For your straightforward landlords, that's a lot of low-value work. And for
+  <strong>jointly-owned</strong> property it's worse: each co-owner is a separate taxpayer who files their own
+  share, so a couple is <strong>ten filings</strong> and a fiddly apportionment of every figure.</p>
+  <p>Those simple joint-owner clients are rarely worth full-service fees, but you don't want to lose them, or
+  spend your time hand-splitting rent four times a year.</p>
+
+  <h2>What LetFile is</h2>
+  <p>LetFile is a focused MTD filing tool built specifically for <strong>UK property, including jointly-owned
+  property</strong>. The client enters the property and ownership split once; LetFile apportions every figure,
+  files separately under each owner's own HMRC authorisation, handles Section 24 per owner, and submits the
+  final declaration. It files directly to HMRC through the official MTD API.</p>
+  <ul>
+    <li><strong>£29 to £99 a year</strong> (Single £29, Couple £49 for both owners, Portfolio £99), not per month.</li>
+    <li>Does the <strong>joint-ownership split</strong> automatically, the thing generic tools ignore.</li>
+    <li>Free for the client to set up; they only pay when they file.</li>
+  </ul>
+
+  <div class="callout key">
+    <p><strong>The honest bit:</strong> LetFile is currently <strong>individual-facing</strong>, there's no
+    agent filing flow yet, so today you <strong>refer</strong> clients rather than file on their behalf through
+    LetFile. An agent flow is on our roadmap; tell us if you'd use it and we'll prioritise it.</p>
+  </div>
+
+  <h2>Why hand a client to LetFile</h2>
+  <ul>
+    <li><strong>Keep the client, lose the chore.</strong> They stay yours for the work that matters; LetFile
+    just handles their routine quarterly filing.</li>
+    <li><strong>The joint-ownership split is done right,</strong> so you're not fielding "which half is mine?"
+    questions or correcting apportionment errors.</li>
+    <li><strong>It's cheap enough to be a no-brainer</strong> for the client, so recommending it makes you look
+    good without costing them much.</li>
+    <li><strong>You focus your time</strong> on advisory and the complex returns that actually pay.</li>
+  </ul>
+
+  <h2>How to refer</h2>
+  <p>Two easy ways:</p>
+  <ul>
+    <li>Just point clients to <a href="https://letfile.co.uk">letfile.co.uk</a>, they can check if they're
+    affected and set up in minutes.</li>
+    <li>Or <a href="mailto:hello@letfile.co.uk?subject=Accountant%20referral%20enquiry">get in touch</a> and
+    we'll set up a simple referral arrangement and give you a one-pager your clients can follow.</li>
+  </ul>
+
+  <div class="cta-band">
+    <h2>Have landlord clients dreading MTD?</h2>
+    <p>Send them to LetFile, or talk to us about a referral arrangement for your practice.</p>
+    <a href="mailto:hello@letfile.co.uk?subject=Accountant%20referral%20enquiry" class="btn btn-primary btn-lg">Get in touch &rarr;</a>
+  </div>
+
+  <p class="disc">LetFile is an independent product of Gojin Ltd and is not affiliated with or endorsed by
+  HMRC. This page is general information, not tax or professional advice. Figures and thresholds accurate as of
+  November 2026; check the current position on
+  <a href="https://www.gov.uk/guidance/check-if-youre-eligible-for-making-tax-digital-for-income-tax">GOV.UK</a>.</p>
+</div></main>
+<footer><div class="wrap">
+  <p><a href="/">LetFile home</a> &middot; <a href="/mtd-for-jointly-owned-property.html">Jointly owned property</a> &middot; <a href="/section-24-landlords-explained.html">Section 24</a> &middot; <a href="/mtd-income-tax-deadlines.html">MTD deadlines</a> &middot; <a href="/mtd-checker.html">Am I affected?</a> &middot; <a href="/privacy.html">Privacy</a> &middot; <a href="/terms.html">Terms</a></p>
+  <p>LetFile files your Making Tax Digital updates directly to HMRC. A product of Gojin Ltd (company number 15323363).</p>
+</div></footer>
+</body>
+</html>
