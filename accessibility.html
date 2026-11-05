@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Accessibility statement | LetFile</title>
+<meta name="description" content="LetFile's accessibility statement. We aim to meet WCAG 2.1 AA. What's accessible, known limitations, and how to report an issue." />
+<link rel="canonical" href="https://letfile.co.uk/accessibility.html" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="apple-touch-icon" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--paper:#F6F2E9;--paper-2:#EFE8D9;--ink:#17231C;--muted:#4C5A50;--green:#1F4D3A;--ochre:#B97A28;--line:rgba(23,35,28,0.14);--line-soft:rgba(23,35,28,0.08);--r-sm:10px;--font-display:'Fraunces',Georgia,serif;--font-body:'Hanken Grotesk',ui-sans-serif,system-ui,sans-serif;}
+  *{box-sizing:border-box;}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;}
+  body{margin:0;font-family:var(--font-body);color:var(--ink);background:var(--paper);line-height:1.65;}
+  body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.22'/%3E%3C/svg%3E");}
+  .wrap{max-width:720px;margin:0 auto;padding:0 24px;}
+  a{color:var(--green);text-underline-offset:2px;}
+  header.bar{border-bottom:1px solid var(--line-soft);background:rgba(246,242,233,.85);backdrop-filter:blur(8px);}
+  .bar-in{max-width:1140px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;}
+  .logo{font-family:var(--font-display);font-weight:600;font-size:1.3rem;color:var(--green);text-decoration:none;display:flex;align-items:center;gap:.4em;}
+  .logo .mark{width:16px;height:16px;border-radius:50%;background:var(--ochre);display:inline-block;}
+  main a.skip{position:absolute;left:-999px;}main a.skip:focus{left:24px;top:8px;background:var(--green);color:#fff;padding:8px 12px;border-radius:8px;}
+  .crumb{font-size:.85rem;color:var(--muted);padding:26px 0 0;}
+  h1{font-family:var(--font-display);font-weight:600;font-size:clamp(1.9rem,5vw,2.6rem);line-height:1.1;margin:.3em 0 .3em;}
+  h2{font-family:var(--font-display);font-weight:600;font-size:1.4rem;margin:1.8em 0 .3em;}
+  p,li{font-size:1.05rem;}main p{margin:.7em 0;}ul{padding-left:1.3em;}li{margin:.35em 0;}
+  .meta{font-size:.9rem;color:var(--muted);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);padding:12px 0;margin:1.2em 0;}
+  footer{border-top:1px solid var(--line-soft);margin-top:40px;padding:26px 0;color:var(--muted);font-size:.88rem;}footer a{color:var(--muted);}
+</style>
+</head>
+<body>
+<header class="bar"><div class="bar-in"><a href="/" class="logo"><span class="mark"></span>LetFile</a><a href="https://app.letfile.co.uk" style="color:var(--green)">Get started</a></div></header>
+<main id="main"><div class="wrap">
+  <a class="skip" href="#content">Skip to content</a>
+  <div class="crumb"><a href="/">Home</a> / Accessibility</div>
+  <h1 id="content">Accessibility statement for LetFile</h1>
+  <p class="meta">Applies to <strong>letfile.co.uk</strong> and the LetFile app at <strong>app.letfile.co.uk</strong>. Last reviewed 5 November 2026.</p>
+
+  <p>LetFile is run by Gojin Ltd. We want everyone to be able to file their taxes, so we build LetFile to be
+  usable by as many people as possible, whatever their abilities or the technology they use.</p>
+
+  <h2>How accessible this product is</h2>
+  <p>We aim to meet the <strong>Web Content Accessibility Guidelines (WCAG) 2.1 at AA level</strong>. We've
+  self-assessed the product against those guidelines. In practice this means:</p>
+  <ul>
+    <li>the pages are built from clear, semantic HTML with headings, landmarks and a skip link;</li>
+    <li>every form field has a label, with hints and clear, text-based error messages;</li>
+    <li>you can operate everything with a keyboard;</li>
+    <li>text colours meet AA contrast, and you can zoom to 200% or use a narrow screen without losing content;</li>
+    <li>tables have captions and proper headers, and live figures (like the per-owner split) are announced to screen readers;</li>
+    <li>colour is never the only way we show something, text labels always accompany it.</li>
+  </ul>
+
+  <h2>Known limitations</h2>
+  <p>We're honest about where we're still improving:</p>
+  <ul>
+    <li>on links and buttons we currently rely on the browser's default focus outline rather than a custom one;</li>
+    <li>not every interface component has been formally audited for non-text (3:1) contrast;</li>
+    <li>autocomplete is set on identity fields but not on every input.</li>
+  </ul>
+  <p>We're working to close these.</p>
+
+  <h2>Reporting an accessibility problem</h2>
+  <p>If you find something that isn't accessible, or you need information in a different format, email
+  <a href="mailto:hello@letfile.co.uk">hello@letfile.co.uk</a> and we'll do our best to help and to fix it.</p>
+
+  <h2>Enforcement</h2>
+  <p>If you're not happy with how we respond, the Equality and Human Rights Commission (EHRC) is responsible
+  for enforcing the accessibility regulations. You can contact the
+  <a href="https://www.equalityadvisoryservice.com/">Equality Advisory and Support Service (EASS)</a>.</p>
+</div></main>
+<footer><div class="wrap">
+  <p><a href="/">LetFile home</a> &middot; <a href="/mtd-checker.html">Am I affected?</a> &middot; <a href="https://app.letfile.co.uk">Get started</a> &middot; <a href="/privacy.html">Privacy</a> &middot; <a href="/terms.html">Terms</a></p>
+  <p>A product of Gojin Ltd (company number 15323363).</p>
+</div></footer>
+</body>
+</html>
